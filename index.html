@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Mockup</title>
+    <!-- <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/sidebar.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-section">
+            <i class="fas fa-bars"></i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="logo">
+        </div>
+        <div class="search-section">
+            <input type="text" placeholder="검색">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="icons-section">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bell"></i>
+            <div class="user-profile"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="nav-item active"><i class="fas fa-home"></i><span>홈</span></div>
+            <div class="nav-item"><i class="fab fa-youtube"></i><span>Shorts</span></div>
+            <div class="nav-item"><i class="fas fa-layer-group"></i><span>구독</span></div>
+            <hr>
+            <div class="nav-item"><i class="fas fa-history"></i><span>시청 기록</span></div>
+            <div class="nav-item"><i class="fas fa-clock"></i><span>나중에 볼 동영상</span></div>
+        </aside>
+
+        <main class="video-grid">
+            <script>
+                for(let i=1; i<=8; i++) {
+                    document.write(`
+                        <div class="video-card">
+                            <div class="thumbnail">
+                                <img src="https://picsum.photos/seed/${i+10}/300/170" alt="Thumbnail">
+                            </div>
+                            <div class="video-info">
+                                <div class="channel-icon"></div>
+                                <div class="text-info">
+                                    <h3 class="title">유튜브 목업 만들기 ${i}단계 - HTML/CSS 기초</h3>
+                                    <p class="channel-name">코딩 마스터</p>
+                                    <p class="stats">조회수 10만회 • 3시간 전</p>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </main>
+    </div>
+</body>
+</html>
